@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CrystalCollector</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+</head>
+<body>
+
+			<div class="container">
+				<h1><strong>CrystalsCollector!</strong></h1>
+			</div>
+		
+			<div class="instructions">
+				<p>You will be given a random number at the start of the<br>game.</p>
+				<p>There are four crystals below. By clicking on a crystal, you<br> will add a specific amount of points to your total score.</p>
+				<p>You win the game by matching your total score to the random<br>number. You lose if your total score goes above<br> the random number.</p>
+				<p>The value of each crsytal is hidden from you until you<br>click on it.</p>
+				<p>Each time when the game starts, the game will change the<br>values of each crystal.</p>
+			</div>
+
+			<div class="targetBoard">
+				<h2 class="targetScore" id="MainScore">39</h2>
+			</div>
+
+			<div class="WinCount">
+				<h3 class="winScore">0</h3>
+			</div>
+
+			<div class="lossCount">
+				<h3 class="lossScore">0</h3>
+			</div>
+			
+
+			<div class="crystals">
+				<img src="assets/images/red.png" alt="red" id="red" class="crystals">
+				<img src="assets/images/yellow.png" alt="yellow" id="yellow" class="crystals">
+				<img src="assets/images/green.png" alt="green" id="green" class="crystals">
+				<img src="assets/images/blue.png" alt="blue" id="blue" class="crystals">
+			</div>
+
+			<div class="yourScoreBoard">
+				<h4 class="yourScore" id="myScore">0</h4>
+			</div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+	<script type="text/javascript">
+	
+	var crystal = {
+		red:
+		{
+			name:"red",
+			value: 0
+		},
+		blue:
+		{
+			name:"blue",
+			value: 0
+		},
+		yellow:
+		{
+			name: "yellow",
+			value: 0
+		},
+		green:
+		{
+			name:"green",
+			value: 0
+		}
+
+	};
+
+	var yourScore = 0;
+	var targetScore = 0;
+	var winScore = 0;
+	var lossScore = 0;
+
+	var getRandom = function(min, max) {
+		return Math.floor(Math.random() = (max - min + 1)) + min;
+	}
+
+	var startGame = function(){
+
+			// reset the current score
+	var yourScore = 0;
+		// set a new target score (between 19 and 120)
+	targetScore = getRandom(19, 120);
+		// set different values for each of the crystals (between 1 and 12)
+	crystal.red.value = getRandom(1, 12);
+	crystal.blue.value = getRandom(1, 12);
+	crystal.yellow.value = getRandom(1, 12);
+	crystal.green.value = getRandom(1, 12);
+
+		// change the HTML to reflect all of these changes
+	$("#myScore").html("yourScore");
+	$("#MainScore").html("targetScore");
+		// testing Console
+
+	startGame();
+		
+	$("#yourScore").html(yourScore);
+	$("#targetScore").html(targetScore);
+
+	}
+
+	$("#red").click(function() {
+		alert('test');
+	});
+
+	$("#blue").click(function() {
+		alert('test');
+	});
+	$("#yellow").click(function() {
+		alert('test');
+	});	
+	$("#green").click(function() {
+		alert('test');
+	});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+	background-image: url("../images/background_img.jpg");
+	background-repeat: repeat-y;
+	background-size: 
+}
+
+.container {
+	background-color:#ff4000; 
+	width:400px;
+	margin:10px;
+	padding:10px; 
+}
+
+.instructions {
+	background-color:#ffc0cb;
+	font-size: 18px;
+	color: green;
+	width:400px;
+	margin:10px;
+	padding:10px;
+}
+
+h1 {
+	font-size: 24px;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	color: #ffffff;
+}
+h2 {
+	background-color:green;
+	width: 140px;
+	height: 80px;
+	margin:10px;
+	padding:10px;
+}
+h3 {
+	background-color:skyblue;
+	width: 240px;
+	height: 80px;
+	margin:10px;
+	padding:10px;
+
+}
+h4{
+	background-color: purple;
+	width: 140px;
+	height: 30px;
+	margin:10px;
+	padding:10px;
+
+}
+
